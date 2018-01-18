@@ -29,4 +29,5 @@ task clean(type: Delete) {
 ext{
     daggerVersion = '2.11'
     supportLibVersion = '26.1.0'
+    retrofitVersion = '2.3.0'
 }
