@@ -25,3 +25,8 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext{
+    daggerVersion = '2.11'
+    supportLibVersion = '26.1.0'
+}
