@@ -8,6 +8,7 @@ import javax.inject.Singleton;
 /**
  * Created by mopengfei on 2018-01-23.
  */
+@Singleton
 public class UmengUtils {
     private String title;
     private String content;

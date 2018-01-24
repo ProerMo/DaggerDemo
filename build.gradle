@@ -27,7 +27,12 @@ task clean(type: Delete) {
 }
 
 ext{
-    daggerVersion = '2.11'
+    daggerVersion = '2.13'
     supportLibVersion = '26.1.0'
     retrofitVersion = '2.3.0'
+    rxJava = '2.1.8'
+    rxAndroid = '1.2.1'
+    okhttp = '3.9.1'
+    gson = '2.8.2'
+    okio = "1.13.0"
 }
