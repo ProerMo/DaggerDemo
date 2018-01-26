@@ -2,7 +2,6 @@ package com.mp4.daggerdemo;
 
 
 import retrofit2.http.GET;
-import retrofit2.http.POST;
 import retrofit2.http.Query;
 import rx.Observable;
 
@@ -11,6 +10,6 @@ import rx.Observable;
  */
 
 public interface ExpressService {
-    @POST("query")
+    @GET("quer")
     Observable<Express> getExpressData(@Query("type") String type, @Query("postid") String postId);
 }
