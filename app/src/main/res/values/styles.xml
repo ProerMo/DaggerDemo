@@ -7,5 +7,22 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    // CustomToolbar左右图标ImageView的Style定义，CustomToolbar默认的高度为?attr/actionBarSize
+    <style name="ToolbarImg">
+        <item name="android:layout_width">?attr/actionBarSize</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!--<style name="Text" parent="TextAppearance.AppCompat.Large.Inverse"/>-->
 
+    <style name="Text">
+        <item name="android:textColor">@color/text_normal</item>
+        <item name="android:textSize">@dimen/font_size_normal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
 </resources>

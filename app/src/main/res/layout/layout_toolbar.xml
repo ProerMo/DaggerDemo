@@ -6,6 +6,7 @@
         <variable
             name="title"
             type="String" />
+
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -14,22 +15,22 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/right_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
+            android:id="@+id/left_icon"
+            style="@style/ToolbarImg"
             android:src="@mipmap/ic_launcher" />
 
         <TextView
             android:id="@+id/title_view"
+            style="@style/Text"
+            android:gravity="center"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@={title}" />
+            android:text="@{title}" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:id="@+id/right_icon"
+            style="@style/ToolbarImg"
             android:src="@mipmap/ic_launcher" />
     </LinearLayout>
 </layout>

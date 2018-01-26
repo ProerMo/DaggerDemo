@@ -42,8 +42,8 @@ public class MainActivity extends DaggerAppCompatActivity {
 //        toolbar.addView(toolbarView);
 //        setNeedToolbar(false);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
 //        addContentView(toolbar,new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 50));
 //        setSupportActionBar(toolbar);
         Log.d("toString", "onCreate: " + umengUtils.toString() + umengUtils.getTitle());
