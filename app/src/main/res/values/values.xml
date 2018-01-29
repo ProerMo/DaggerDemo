@@ -11,6 +11,14 @@
 
     <!-- toolbar -->
     <dimen name="tool_bar_button_size">24dp</dimen>
+    <dimen name="font_size_mlarge">17sp</dimen>
+    <!--注册页面-->
+    <dimen name="font_size_xxlarge">30sp</dimen>
+    <dimen name="common_margin_large">18dp</dimen>
+    <dimen name="common_margin_xlarge">20dp</dimen>
+    <dimen name="common_margin_xxlarge">22dp</dimen>
+    <dimen name="common_margin_xxxlarge">24dp</dimen>
+    <dimen name="common_margin_xxxxlarge">30dp</dimen>
 
     <dimen name="common_padding">8dp</dimen>
     <dimen name="common_margin">16dp</dimen>

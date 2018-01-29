@@ -25,27 +25,29 @@ public class CustomToolbar extends LinearLayout {
     private String title;
     private Drawable rightDrawable;
     private boolean leftBackable;
-    private boolean rightBackable;
+    private boolean leftShowable = true;
+    private boolean rightShowable;
+    private boolean titleShowable;
 
     public CustomToolbar(Context context) {
         super(context);
-        initAttrs(null,0,0);
+        initAttrs(null, 0, 0);
     }
 
     public CustomToolbar(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        initAttrs(attrs,0,0);
+        initAttrs(attrs, 0, 0);
     }
 
     public CustomToolbar(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        initAttrs(attrs,defStyleAttr,0);
+        initAttrs(attrs, defStyleAttr, 0);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public CustomToolbar(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
-        initAttrs(attrs,defStyleAttr,defStyleRes);
+        initAttrs(attrs, defStyleAttr, defStyleRes);
 
     }
 
@@ -64,8 +66,14 @@ public class CustomToolbar extends LinearLayout {
             if (array.hasValue(R.styleable.CustomToolbar_left_backable)) {
                 leftBackable = array.getBoolean(R.styleable.CustomToolbar_left_backable, false);
             }
-            if (array.hasValue(R.styleable.CustomToolbar_right_backable)) {
-                rightBackable = array.getBoolean(R.styleable.CustomToolbar_right_backable, false);
+            if (array.hasValue(R.styleable.CustomToolbar_left_showable)) {
+                leftShowable = array.getBoolean(R.styleable.CustomToolbar_left_showable, true);
+            }
+            if (array.hasValue(R.styleable.CustomToolbar_right_showable)) {
+                rightShowable = array.getBoolean(R.styleable.CustomToolbar_right_showable, false);
+            }
+            if (array.hasValue(R.styleable.CustomToolbar_title_showable)) {
+                titleShowable = array.getBoolean(R.styleable.CustomToolbar_title_showable, false);
             }
             array.recycle();
         }
@@ -74,8 +82,13 @@ public class CustomToolbar extends LinearLayout {
 
     private void initView() {
         LayoutToolbarBinding binding = LayoutToolbarBinding.inflate(LayoutInflater.from(getContext()), this, true);
-        if (null != title) {
-            binding.setTitle(title);
+        if (titleShowable) {
+            if (null != title) {
+                binding.setTitle(title);
+            }
+            binding.titleView.setVisibility(VISIBLE);
+        } else {
+            binding.titleView.setVisibility(INVISIBLE);
         }
         if (null != leftDrawable) {
             binding.leftIcon.setImageDrawable(leftDrawable);
@@ -83,9 +96,18 @@ public class CustomToolbar extends LinearLayout {
         if (null != rightDrawable) {
             binding.rightIcon.setImageDrawable(rightDrawable);
         }
-
-        binding.leftIcon.setOnClickListener(leftOnclickListener);
-        binding.rightIcon.setOnClickListener(rightOnClickListener);
+        if (leftShowable) {
+            binding.leftIcon.setVisibility(VISIBLE);
+            binding.leftIcon.setOnClickListener(leftOnclickListener);
+        } else {
+            binding.leftIcon.setVisibility(INVISIBLE);
+        }
+        if (rightShowable) {
+            binding.rightIcon.setVisibility(VISIBLE);
+            binding.rightIcon.setOnClickListener(rightOnClickListener);
+        } else {
+            binding.rightIcon.setVisibility(INVISIBLE);
+        }
 
     }
 
@@ -102,11 +124,7 @@ public class CustomToolbar extends LinearLayout {
     private OnClickListener rightOnClickListener = new OnClickListener() {
         @Override
         public void onClick(View v) {
-            if (rightBackable) {
-                if (getContext() instanceof Activity) {
-                    ((Activity) getContext()).finish();
-                }
-            }
+
         }
     };
 

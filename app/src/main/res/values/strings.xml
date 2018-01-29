@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">DaggerDemo</string>
+    <string name="register_head_text">注册</string>
+    <string name="register_email">邮箱</string>
+    <string name="register_verify">验证码</string>
+    <string name="register_verify_hint">请输入验证码</string>
 </resources>

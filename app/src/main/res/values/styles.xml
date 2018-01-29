@@ -8,10 +8,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
     // CustomToolbar左右图标ImageView的Style定义，CustomToolbar默认的高度为?attr/actionBarSize
+
     <style name="ToolbarImg">
         <item name="android:layout_width">?attr/actionBarSize</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:gravity">center</item>
+        <!--图片按原图大小显示并且居中显示-->
+        <item name="android:scaleType">center</item>
     </style>
     <!--<style name="Text" parent="TextAppearance.AppCompat.Large.Inverse"/>-->
 
@@ -25,4 +28,32 @@
         <item name="android:lineSpacingExtra">2dp</item>
         <item name="android:gravity">center_vertical</item>
     </style>
+
+    <style name="Text.Bold" parent="Text">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.Mid" parent="Text">
+        <item name="android:textSize">@dimen/font_size_mid</item>
+    </style>
+
+    <style name="Text.Mlarge" parent="Text">
+        <item name="android:textSize">@dimen/font_size_mlarge</item>
+    </style>
+
+    <style name="Text.Mlarge.Bold" parent="Text.Mid">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="RegisterHeadText" parent="Text.Bold">
+        <item name="android:textSize">@dimen/font_size_xxlarge</item>
+        <item name="android:textColor">@color/text_register_head</item>
+    </style>
+
+    <style name="register_edit">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@null</item>
+        <item name="android:textSize">@dimen/font_size_mid</item>
+    </style>
+
 </resources>

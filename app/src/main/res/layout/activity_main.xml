@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFEFF0F4"
-    tools:context="com.mp4.daggerdemo.MainActivity">
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.mp4.daggerdemo.MainActivity">
 
-    <com.mp4.daggerdemo.widget.CustomToolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:left_backable="true"
-        app:left_img_src="@mipmap/ic_launcher_round"
-        app:right_backable="false"
-        app:text_str="@string/app_name">
+    <include layout="@layout/layout_register"/>
+    <!--<com.mp4.daggerdemo.widget.CustomToolbar-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:left_backable="true"-->
+    <!--app:right_backable="false"-->
+    <!--app:text_str="与大不列颠及北爱尔兰联合王国聊天中">-->
 
-    </com.mp4.daggerdemo.widget.CustomToolbar>
+    <!--</com.mp4.daggerdemo.widget.CustomToolbar>-->
     <!--<android.support.design.widget.AppBarLayout-->
     <!--android:layout_width="match_parent"-->
     <!--android:layout_height="wrap_content">-->

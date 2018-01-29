@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="CustomToolbar">
-        <attr name="right_img_src" format="reference">@mipmap/ic_launcher</attr>
-        <attr name="left_img_src" format="reference">@mipmap/ic_launcher</attr>
+        <attr name="right_img_src" format="reference">@mipmap/icon_share</attr>
+        <attr name="left_img_src" format="reference">@mipmap/icon_back</attr>
         <attr name="text_str" format="string">@string/app_name</attr>
         <attr name="left_backable" format="boolean">true</attr>
-        <attr name="right_backable" format="boolean">false</attr>
+        <attr name="left_showable" format="boolean">true</attr>
+        <attr name="right_showable" format="boolean">false</attr>
+        <attr name="title_showable" format="boolean">false</attr>
     </declare-styleable>
 </resources>
